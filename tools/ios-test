@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# This script runs the iOS tests.
+
+set -e
+
+pushd swift
+xcodegen
+pod install
+fastlane scan --workspace TrustWalletCore.xcworkspace --scheme TrustWalletCore --sdk iphonesimulator --device='iPhone 11' --clean
+popd
