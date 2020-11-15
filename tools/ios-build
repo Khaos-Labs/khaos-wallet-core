@@ -8,7 +8,7 @@ set -e
 BUILD_FOLDER_DEVICE="build/ios-dev"
 BUILD_FOLDER_SIMULATOR="build/ios-sim"
 BUILD_FOLDER_CATALYST="build/ios-mac-catalyst"
-TARGETS="TrezorCrypto protobuf TrustWalletCore"
+TARGETS="TrezorCrypto protobuf KhaosWalletCore"
 
 function buildDevices() {
     echo -e "\n\nBuilding for iOS Device..."
@@ -45,7 +45,7 @@ function buildCatalyst() {
                                           -DCMAKE_BUILD_TYPE=MAC_CATALYST
     sed -i '' "s/-mmacosx-version-min=10.15//g" "$BUILD_FOLDER_CATALYST"/trezor-crypto/CMakeFiles/TrezorCrypto.dir/flags.make
     sed -i '' "s/-mmacosx-version-min=10.15//g" "$BUILD_FOLDER_CATALYST"/CMakeFiles/protobuf.dir/flags.make
-    sed -i '' "s/-mmacosx-version-min=10.15//g" "$BUILD_FOLDER_CATALYST"/CMakeFiles/TrustWalletCore.dir/flags.make
+    sed -i '' "s/-mmacosx-version-min=10.15//g" "$BUILD_FOLDER_CATALYST"/CMakeFiles/KhaosWalletCore.dir/flags.make
     make -C "$BUILD_FOLDER_CATALYST" $TARGETS
 }
 
@@ -54,7 +54,7 @@ function fattenBinary() {
     mkdir -p build/ios
     xcrun lipo -create -output build/ios/libprotobuf.a "$BUILD_FOLDER_DEVICE"/libprotobuf.a "$BUILD_FOLDER_SIMULATOR"/libprotobuf.a
     xcrun lipo -create -output build/ios/libTrezorCrypto.a "$BUILD_FOLDER_DEVICE"/trezor-crypto/libTrezorCrypto.a "$BUILD_FOLDER_SIMULATOR"/trezor-crypto/libTrezorCrypto.a
-    xcrun lipo -create -output build/ios/libTrustWalletCore.a "$BUILD_FOLDER_DEVICE"/libTrustWalletCore.a "$BUILD_FOLDER_SIMULATOR"/libTrustWalletCore.a
+    xcrun lipo -create -output build/ios/libKhaosWalletCore.a "$BUILD_FOLDER_DEVICE"/libKhaosWalletCore.a "$BUILD_FOLDER_SIMULATOR"/libKhaosWalletCore.a
 }
 
 function main() {

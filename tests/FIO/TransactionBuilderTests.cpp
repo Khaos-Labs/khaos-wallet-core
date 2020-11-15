@@ -1,4 +1,4 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -107,7 +107,7 @@ TEST(FIOTransactionBuilder, NewFundsRequest) {
     const Data iv = parse_hex("000102030405060708090a0b0c0d0e0f"); // use fixed iv for testability
     string t = TransactionBuilder::createNewFundsRequest(addr6M, privKeyBA,
         "mario@fiotestnet", "FIO5kJKNHwctcfUM5XZyiWSqSTM5HTzznJP9F3ZdbhaQAHEVq575o", "alice@fiotestnet", "bc1qvy4074rggkdr2pzw5vpnn62eg0smzlxwp70d7v",
-        "5", "BTC", "Memo", "Hash", "https://trustwallet.com",
+        "5", "BTC", "Memo", "Hash", "https://khaoswallet.com",
         chainParams, fee, "rewards@wallet", 1579785000, iv);
 
     EXPECT_EQ(R"({"compression":"none","packed_context_free_data":"","packed_trx":"289b295ec99b904215ff000000000100403ed4aa0ba85b00acba384dbdb89a01102b2f46fca756b200000000a8ed32328802106d6172696f4066696f746573746e657410616c6963654066696f746573746e6574c00141414543417751464267634943516f4c4441304f442f3575342f6b436b7042554c4a44682f546951334d31534f4e4938426668496c4e54766d39354249586d54396f616f7a55632f6c6c3942726e57426563464e767a76766f6d3751577a517250717241645035683433305732716b52355266416555446a704f514732364c347a6936767241553052764855474e382b685779736a6971506b2b7a455a444952534678426268796c69686d59334f4752342f5a46466358484967343241327834005ed0b2000000000c716466656a7a32613577706c0e726577617264734077616c6c657400","signatures":["SIG_K1_Kk79iVcQMpqpVgZwGTmC1rxgCTLy5BDFtHd8FvjRNm2FqNHR9dpeUmPTNqBKGMNG3BsPy4c5u26TuEDpS87SnyMpF43cZk"]})", t);
@@ -196,7 +196,7 @@ TEST(FIOTransaction, ActionAddPubAddressInternal) {
 
 TEST(FIONewFundsContent, serialize) {
     {
-        NewFundsContent newFunds {"bc1qvy4074rggkdr2pzw5vpnn62eg0smzlxwp70d7v", "10", "BTC", "BTC", "Memo", "Hash", "https://trustwallet.com"};
+        NewFundsContent newFunds {"bc1qvy4074rggkdr2pzw5vpnn62eg0smzlxwp70d7v", "10", "BTC", "BTC", "Memo", "Hash", "https://khaoswallet.com"};
         Data ser;
         newFunds.serialize(ser);
         EXPECT_EQ(hex(ser), "2a626331717679343037347267676b647232707a773576706e6e3632656730736d7a6c78777037306437760231300342544303425443044d656d6f04486173681768747470733a2f2f747275737477616c6c65742e636f6d0000000000");
@@ -225,7 +225,7 @@ TEST(FIONewFundsContent, deserialize) {
         EXPECT_EQ(newFunds.payeePublicAddress, "bc1qvy4074rggkdr2pzw5vpnn62eg0smzlxwp70d7v");
         EXPECT_EQ(newFunds.amount, "10");
         EXPECT_EQ(newFunds.coinSymbol, "BTC");
-        EXPECT_EQ(newFunds.offlineUrl, "https://trustwallet.com");
+        EXPECT_EQ(newFunds.offlineUrl, "https://khaoswallet.com");
     }
     {
         // incomplete input

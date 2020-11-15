@@ -1,6 +1,6 @@
 {
-  "name": "@trustwallet/wallet-core",
-  "version": "2.2.9",
+  "name": "@Khaos-Labs/khaos-wallet-core",
+  "version": "1.0.0",
   "description": "wallet core types and protobuf messages",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/trustwallet/wallet-core.git"
+    "url": "git://github.com/Khaos-Labs/khaos-wallet-core.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/trustwallet/wallet-core/issues"
+    "url": "https://github.com/Khaos-Labs/khaos-wallet-core/issues"
   },
-  "homepage": "https://github.com/trustwallet/wallet-core#readme",
+  "homepage": "https://github.com/Khaos-Labs/khaos-wallet-core#readme",
   "files": [
     "dist"
   ],

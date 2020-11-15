@@ -18,7 +18,7 @@ import kotlin.experimental.and
 class MainActivity : AppCompatActivity() {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("KhaosWalletCore")
     }
 
     private val seedPhrase = "ripple scissors kick mammal hire column oak again sun offer wealth tomorrow wagon turn fatal"

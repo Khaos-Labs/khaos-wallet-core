@@ -1,10 +1,10 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
 // file LICENSE at the root of the source code distribution tree.
 
-#include <TrustWalletCore/TWStoredKey.h>
+#include <KhaosWalletCore/TWStoredKey.h>
 
 #include "../Coin.h"
 #include "../Data.h"
@@ -97,7 +97,8 @@ struct TWAccount* _Nullable TWStoredKeyAccount(struct TWStoredKey* _Nonnull key,
 struct TWAccount* _Nullable TWStoredKeyAccountForCoin(struct TWStoredKey* _Nonnull key, enum TWCoinType coin, struct TWHDWallet* _Nullable wallet) {
     try {
         const auto account = key->impl.account(coin, (wallet ? &wallet->impl : nullptr));
-        return (account == nullptr) ? nullptr : new TWAccount{ *account };
+        // Note: std::optional.value() is not available in XCode with target < iOS 12, using *
+        return (!account.has_value()) ? nullptr : new TWAccount{ *account };
     } catch (...) {
         return nullptr;
     }

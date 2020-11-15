@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.8 FATAL_ERROR)
 
-project(TrustWalletCore)
+project(KhaosWalletCore)
 
 include(GNUInstallDirs)
 
@@ -72,20 +72,20 @@ endif()
 if(${ANDROID})
     message("Configuring for JNI")
     file(GLOB_RECURSE sources src/*.c src/*.cc src/*.cpp src/*.h jni/cpp/*.c jni/cpp/*.cpp jni/cpp/*.h jni/cpp/*.c)
-    add_library(TrustWalletCore SHARED ${sources} ${PROTO_SRCS} ${PROTO_HDRS})
+    add_library(KhaosWalletCore SHARED ${sources} ${PROTO_SRCS} ${PROTO_HDRS})
 
     find_library(log-lib log)
-    target_link_libraries(TrustWalletCore PRIVATE TrezorCrypto protobuf ${log-lib} Boost::boost)
+    target_link_libraries(KhaosWalletCore PRIVATE TrezorCrypto protobuf ${log-lib} Boost::boost)
 else()
     message("Configuring standalone")
     file(GLOB_RECURSE sources src/*.c src/*.cc src/*.cpp src/*.h)
-    add_library(TrustWalletCore ${sources} ${PROTO_SRCS} ${PROTO_HDRS})
+    add_library(KhaosWalletCore ${sources} ${PROTO_SRCS} ${PROTO_HDRS})
 
-    target_link_libraries(TrustWalletCore PRIVATE TrezorCrypto protobuf Boost::boost)
+    target_link_libraries(KhaosWalletCore PRIVATE TrezorCrypto protobuf Boost::boost)
 endif()
-target_compile_options(TrustWalletCore PRIVATE "-Wall")
+target_compile_options(KhaosWalletCore PRIVATE "-Wall")
 
-set_target_properties(TrustWalletCore
+set_target_properties(KhaosWalletCore
     PROPERTIES
         CXX_STANDARD 17
         CXX_STANDARD_REQUIRED ON
@@ -93,7 +93,7 @@ set_target_properties(TrustWalletCore
 
 # Define headers for this library. PUBLIC headers are used for compiling the
 # library, and will be added to consumers' build paths.
-target_include_directories(TrustWalletCore
+target_include_directories(KhaosWalletCore
     PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:include>
@@ -111,7 +111,7 @@ endif()
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/swift/cpp.xcconfig.in ${CMAKE_CURRENT_SOURCE_DIR}/swift/cpp.xcconfig @ONLY)
 
-install(TARGETS TrustWalletCore
+install(TARGETS KhaosWalletCore
         LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
         ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
         )

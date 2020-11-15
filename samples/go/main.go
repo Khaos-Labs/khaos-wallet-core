@@ -1,12 +1,12 @@
 package main
 
 // #cgo CFLAGS: -I../../include
-// #cgo LDFLAGS: -L../../build -L../../build/trezor-crypto -lTrustWalletCore -lprotobuf -lTrezorCrypto -lc++ -lm
-// #include <TrustWalletCore/TWHDWallet.h>
-// #include <TrustWalletCore/TWPrivateKey.h>
-// #include <TrustWalletCore/TWPublicKey.h>
-// #include <TrustWalletCore/TWBitcoinScript.h>
-// #include <TrustWalletCore/TWAnySigner.h>
+// #cgo LDFLAGS: -L../../build -L../../build/trezor-crypto -lKhaosWalletCore -lprotobuf -lTrezorCrypto -lc++ -lm
+// #include <KhaosWalletCore/TWHDWallet.h>
+// #include <KhaosWalletCore/TWPrivateKey.h>
+// #include <KhaosWalletCore/TWPublicKey.h>
+// #include <KhaosWalletCore/TWBitcoinScript.h>
+// #include <KhaosWalletCore/TWAnySigner.h>
 import "C"
 
 import (

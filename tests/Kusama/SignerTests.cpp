@@ -1,4 +1,4 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -13,7 +13,7 @@
 #include "proto/Polkadot.pb.h"
 #include "uint256.h"
 
-#include <TrustWalletCore/TWSS58AddressType.h>
+#include <KhaosWalletCore/TWSS58AddressType.h>
 #include <gtest/gtest.h>
 
 

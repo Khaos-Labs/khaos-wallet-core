@@ -1,10 +1,10 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
 // file LICENSE at the root of the source code distribution tree.
 
-#include <TrustWalletCore/TWEthereumAbiValue.h>
+#include <KhaosWalletCore/TWEthereumAbiValue.h>
 
 #include "Data.h"
 #include "HexCoding.h"
@@ -53,7 +53,7 @@ TEST(TWEthereumAbiValue, encodeAddress) {
 }
 
 TEST(TWEthereumAbiValue, encodeString) {
-    EXPECT_EQ(hex(*reinterpret_cast<const Data*>(WRAPD(TWEthereumAbiValueEncodeString(TWStringCreateWithUTF8Bytes("trustwallet"))).get())),
+    EXPECT_EQ(hex(*reinterpret_cast<const Data*>(WRAPD(TWEthereumAbiValueEncodeString(TWStringCreateWithUTF8Bytes("khaoswallet"))).get())),
         "31924c4e2bb082322d1efa718bf67c73ca297b481dac9f76ad35670cff0056a3");
 }
 
@@ -65,7 +65,7 @@ TEST(TWEthereumAbiValue, encodeBytes) {
 }
 
 TEST(TWEthereumAbiValue, encodeBytesDyn) {
-    std::string valueStr = "trustwallet";
+    std::string valueStr = "khaoswallet";
     EXPECT_EQ(hex(*reinterpret_cast<const Data*>(WRAPD(TWEthereumAbiValueEncodeBytesDyn(TWDataCreateWithBytes(reinterpret_cast<const unsigned char*>(valueStr.c_str()), valueStr.length()))).get())),
         "31924c4e2bb082322d1efa718bf67c73ca297b481dac9f76ad35670cff0056a3");
 }

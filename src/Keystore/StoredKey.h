@@ -1,4 +1,4 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -11,7 +11,7 @@
 #include "../Data.h"
 #include "../HDWallet.h"
 
-#include <TrustWalletCore/TWCoinType.h>
+#include <KhaosWalletCore/TWCoinType.h>
 #include <nlohmann/json.hpp>
 
 #include <optional>
@@ -71,10 +71,10 @@ public:
 
     /// Returns the account for a specific coin, creating it if necessary and
     /// the provided wallet is not `nullptr`.
-    const Account* account(TWCoinType coin, const HDWallet* wallet);
+    std::optional<const Account> account(TWCoinType coin, const HDWallet* wallet);
 
     /// Returns the account for a specific coin if it exists.
-    const Account* account(TWCoinType coin) const;
+    std::optional<const Account> account(TWCoinType coin) const;
     
     /// Add an account
     void addAccount(const std::string& address, TWCoinType coin, const DerivationPath& derivationPath, const std::string& extetndedPublicKey);

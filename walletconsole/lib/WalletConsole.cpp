@@ -1,4 +1,4 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -28,7 +28,7 @@ using namespace TW;
 
 void WalletConsole::init() {
     _outst << endl;
-    _outst << "Wallet-core Console                          (c) TrustWallet" << endl;
+    _outst << "Wallet-core Console                          (c) KhaosWallet" << endl;
     _outst << "Type 'help' for list of commands." << endl;
     _outst << endl;
 

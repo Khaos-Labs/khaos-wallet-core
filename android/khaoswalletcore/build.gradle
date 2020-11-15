@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+group='com.github.khaoswallet'
+
+android {
+    compileSdkVersion 28
+    ndkVersion '21.2.6472646'
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+
+    lintOptions {
+        abortOnError false
+        disable 'InvalidPackage'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+        debug {
+            minifyEnabled false
+            // limit platforms built for testing
+            ndk {
+                abiFilters 'x86'
+            }
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += '../../jni/java'
+    }
+
+    externalNativeBuild {
+        cmake {
+            version "3.10.2"
+            path "../../CMakeLists.txt"
+        }
+    }
+}
+
+dependencies {
+    implementation 'io.grpc:grpc-protobuf:1.24.2'
+}
+
+apply from: 'maven-push.gradle'
+
+

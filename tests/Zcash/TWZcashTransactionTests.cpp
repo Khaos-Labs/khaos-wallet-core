@@ -1,5 +1,5 @@
 
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -17,7 +17,7 @@
 #include "Coin.h"
 #include "Zcash/Transaction.h"
 
-#include <TrustWalletCore/TWBitcoinScript.h>
+#include <KhaosWalletCore/TWBitcoinScript.h>
 
 #include <gtest/gtest.h>
 

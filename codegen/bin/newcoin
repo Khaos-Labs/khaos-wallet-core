@@ -43,7 +43,7 @@ def self.generate_file(templateFile, folder, fileName, coin)
 end
 
 def self.insert_coin_type(coin)
-    target_file = "include/TrustWalletCore/TWCoinType.h"
+    target_file = "include/KhaosWalletCore/TWCoinType.h"
     target_line = "    TWCoinType#{format_name(coin)} = #{coin['coinId']},\n"
     if insert_target_line(target_file, target_line, "};\n")
         insert_blockchain_type(coin)
@@ -51,7 +51,7 @@ def self.insert_coin_type(coin)
 end
 
 def insert_blockchain_type(coin)
-    target_file = "include/TrustWalletCore/TWBlockchain.h"
+    target_file = "include/KhaosWalletCore/TWBlockchain.h"
     line_number = File.readlines(target_file).count
     target_line = "    TWBlockchain#{coin['blockchain']} = #{line_number - 17},\n"
     insert_target_line(target_file, target_line, "};\n")
@@ -133,8 +133,8 @@ generate_file("newcoin/AddressTests.cpp.erb", "tests/#{name}", "AddressTests.cpp
 generate_file("newcoin/SignerTests.cpp.erb", "tests/#{name}", "SignerTests.cpp", coin)
 generate_file("newcoin/TWAddressTests.cpp.erb", "tests/#{name}", "TWAnyAddressTests.cpp", coin)
 generate_file("newcoin/TWSignerTests.cpp.erb", "tests/#{name}", "TWAnySignerTests.cpp", coin)
-generate_file("newcoin/AddressTests.kt.erb", "android/app/src/androidTest/java/com/trustwallet/core/app/blockchains/#{format_name_lowercase(coin)}", "Test#{name}Address.kt", coin)
-generate_file("newcoin/SignerTests.kt.erb", "android/app/src/androidTest/java/com/trustwallet/core/app/blockchains/#{format_name_lowercase(coin)}", "Test#{name}Signer.kt", coin)
+generate_file("newcoin/AddressTests.kt.erb", "android/app/src/androidTest/java/com/khaoswallet/core/app/blockchains/#{format_name_lowercase(coin)}", "Test#{name}Address.kt", coin)
+generate_file("newcoin/SignerTests.kt.erb", "android/app/src/androidTest/java/com/khaoswallet/core/app/blockchains/#{format_name_lowercase(coin)}", "Test#{name}Signer.kt", coin)
 generate_file("newcoin/Tests.swift.erb", "swift/Tests/Blockchains", "#{name}Tests.swift", coin)
 
 coin_test_gen.generate_coin_test_file(coin, 'TWCoinTypeTests.cpp.erb')

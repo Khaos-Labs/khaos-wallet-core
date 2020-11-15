@@ -1,4 +1,4 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -6,8 +6,8 @@
 
 #include "../interface/TWTestUtilities.h"
 
-#include <TrustWalletCore/TWSegwitAddress.h>
-#include <TrustWalletCore/TWPublicKey.h>
+#include <KhaosWalletCore/TWSegwitAddress.h>
+#include <KhaosWalletCore/TWPublicKey.h>
 
 #include <gtest/gtest.h>
 

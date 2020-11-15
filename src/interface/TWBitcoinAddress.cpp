@@ -1,4 +1,4 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -8,8 +8,8 @@
 #include "../Bitcoin/Address.h"
 
 #include <TrezorCrypto/ecdsa.h>
-#include <TrustWalletCore/TWBitcoinAddress.h>
-#include <TrustWalletCore/TWPublicKey.h>
+#include <KhaosWalletCore/TWBitcoinAddress.h>
+#include <KhaosWalletCore/TWPublicKey.h>
 
 #include <cstring>
 

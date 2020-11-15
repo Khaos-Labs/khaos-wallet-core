@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# This script upload TrustWalletCore.xcframework to s3 and publish to pod trunk
+# This script upload KhaosWalletCore.xcframework to s3 and publish to pod trunk
 #
 
 set -e
@@ -19,8 +19,8 @@ S3_BUCKET=wallet-core
 tools/ios-build-framework
 
 function releaseXCFramework() {
-    FRAMEWORK_FILE=TrustWalletCore.xcframework
-    ZIP_FILENAME="TrustWalletCore.xcframework-$VERSION.zip"
+    FRAMEWORK_FILE=KhaosWalletCore.xcframework
+    ZIP_FILENAME="KhaosWalletCore.xcframework-$VERSION.zip"
 
     PODSPEC_NAME=WalletCoreFW
     PODSPEC_FILE="$BUILD_FOLDER/$PODSPEC_NAME.podspec"
@@ -40,16 +40,16 @@ function releaseXCFramework() {
 Pod::Spec.new do |s|
   s.name             = '$PODSPEC_NAME'
   s.version          = '$VERSION'
-  s.summary          = 'Trust Wallet core data structures and algorithms.'
-  s.homepage         = 'https://github.com/trustwallet/wallet-core'
+  s.summary          = 'Khaos Wallet core data structures and algorithms.'
+  s.homepage         = 'https://github.com/Khaos-Labs/khaos-wallet-core'
   s.license          = 'MIT'
   s.author           = { 'hewigovens' => '360470+hewigovens@users.noreply.github.com' }
-  s.source           = { :git => 'https://github.com/trustwallet/wallet-core.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Khaos-Labs/khaos-wallet-core.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/wallet_core'
   s.source = {
     http: 'https://s3.amazonaws.com/$S3_BUCKET/$ZIP_FILENAME'
   }
-  s.vendored_frameworks = 'TrustWalletCore.xcframework'
+  s.vendored_frameworks = 'KhaosWalletCore.xcframework'
   s.ios.deployment_target = '11.0'
   s.osx.deployment_target = '10.12'
   s.swift_version = '5.1'
@@ -63,7 +63,7 @@ EOF
 
 function releaseTypes() {
 
-    ZIP_FILENAME="TrustWalletCoreTypes-$VERSION.zip"
+    ZIP_FILENAME="KhaosWalletCoreTypes-$VERSION.zip"
 
     PODSPEC_NAME=WalletCoreTypes
     PODSPEC_FILE="$BUILD_FOLDER/$PODSPEC_NAME.podspec"
@@ -82,11 +82,11 @@ function releaseTypes() {
 Pod::Spec.new do |s|
   s.name             = '$PODSPEC_NAME'
   s.version          = '$VERSION'
-  s.summary          = 'Trust Wallet Core defines and types'
-  s.homepage         = 'https://github.com/trustwallet/wallet-core'
+  s.summary          = 'Khaos Wallet Core defines and types'
+  s.homepage         = 'https://github.com/Khaos-Labs/khaos-wallet-core'
   s.license          = 'MIT'
   s.author           = { 'hewigovens' => '360470+hewigovens@users.noreply.github.com' }
-  s.source           = { :git => 'https://github.com/trustwallet/wallet-core.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Khaos-Labs/khaos-wallet-core', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/wallet_core'
   s.source = {
     http: 'https://s3.amazonaws.com/$S3_BUCKET/$ZIP_FILENAME'

@@ -1,4 +1,4 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -80,7 +80,7 @@ TEST(EthereumAbiValueEncoder, encodeAddress) {
 
 TEST(EthereumAbiValueEncoder, encodeString) {
     Data data;
-    ABI::ValueEncoder::encodeString("trustwallet", data);
+    ABI::ValueEncoder::encodeString("khaoswallet", data);
     checkLast32BytesEqual(data, "31924c4e2bb082322d1efa718bf67c73ca297b481dac9f76ad35670cff0056a3");
 }
 
@@ -99,7 +99,7 @@ TEST(EthereumAbiValueEncoder, encodeBytes) {
 
 TEST(EthereumAbiValueEncoder, encodeBytesDyn) {
     Data data;
-    ABI::ValueEncoder::encodeBytesDyn(TW::data(std::string("trustwallet")), data);
+    ABI::ValueEncoder::encodeBytesDyn(TW::data(std::string("khaoswallet")), data);
     checkLast32BytesEqual(data, "31924c4e2bb082322d1efa718bf67c73ca297b481dac9f76ad35670cff0056a3");
 }
 

@@ -34,7 +34,7 @@ bash <(curl -s https://codecov.io/bash) -f coverage.info -t 1faef852-b196-4697-8
 if [[ "$1" == "html" ]]; then
     genhtml --output-directory coverage \
         --demangle-cpp --num-spaces 4 --sort \
-        --title "Trust Wallet Core Test Coverage" \
+        --title "Khaos Wallet Core Test Coverage" \
         --function-coverage --branch-coverage --legend \
         coverage.info
 fi

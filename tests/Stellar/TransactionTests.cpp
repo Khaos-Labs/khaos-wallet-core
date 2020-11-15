@@ -1,4 +1,4 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -10,9 +10,9 @@
 #include "Stellar/Signer.h"
 #include "HexCoding.h"
 #include "PrivateKey.h"
-#include <TrustWalletCore/TWHDWallet.h>
-#include <TrustWalletCore/TWStellarMemoType.h>
-#include <TrustWalletCore/TWStellarPassphrase.h>
+#include <KhaosWalletCore/TWHDWallet.h>
+#include <KhaosWalletCore/TWStellarMemoType.h>
+#include <KhaosWalletCore/TWStellarPassphrase.h>
 #include "BinaryCoding.h"
 
 #include <gtest/gtest.h>

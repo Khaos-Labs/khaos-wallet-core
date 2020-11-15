@@ -1,5 +1,5 @@
 // Copyright © 2017 Pieter Wuille
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -7,7 +7,7 @@
 
 #include "Address.h"
 
-#include <TrustWalletCore/TWHRP.h>
+#include <KhaosWalletCore/TWHRP.h>
 #include <vector>
 
 using namespace TW::Binance;

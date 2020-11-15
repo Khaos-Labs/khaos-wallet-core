@@ -1,9 +1,9 @@
-# Sample Go Integration for [Wallet-Core](https://github.com/trustwallet/wallet-core)
+# Sample Go Integration for [Wallet-Core](https://github.com/Khaos-Labs/khaos-wallet-core)
 
 ## Overview
 
 This folder contains a small **Go** sample integration with
-[Wallet Core](https://github.com/trustwallet/wallet-core) library (part of [Trust Wallet](https://trustwallet.com)),
+[Wallet Core](https://github.com/Khaos-Labs/khaos-wallet-core) library (part of [Khaos Wallet](https://khaoswallet.com)),
 using [cgo](https://golang.org/cmd/cgo/).
 
 ## DISCLAIMER
@@ -14,11 +14,11 @@ using [cgo](https://golang.org/cmd/cgo/).
 
 ## Documentation
 
-See the official [Trust Wallet developer documentation here](https://developer.trustwallet.com).
+See the official [Khaos Wallet developer documentation here](https://developer.khaoswallet.com).
 
 See especially Wallet Core
-[Integration Guide](https://developer.trustwallet.com/wallet-core/integration-guide),
-and [Build Instructions](https://developer.trustwallet.com/wallet-core/building).
+[Integration Guide](https://developer.khaoswallet.com/wallet-core/integration-guide),
+and [Build Instructions](https://developer.khaoswallet.com/wallet-core/building).
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ and [Build Instructions](https://developer.trustwallet.com/wallet-core/building)
 
 ## Building and Running
 
-1. Run `docker run -it trustwallet/wallet-core`
+1. Run `docker run -it Khaos-Labs/khaos-wallet-core`
 The librabry is already built in this image  (Build instructions [here](building.md))  Note: may not be the most recent version.
 
 2. Install go: `apt-get update && apt-get install golang` 
@@ -34,7 +34,7 @@ The librabry is already built in this image  (Build instructions [here](building
 3. Go to the **samples/go** folder within wallet core repo:
 
 ```shell
-git clone https://github.com/trustwallet/wallet-core.git
+git clone https://github.com/Khaos-Labs/khaos-wallet-core.git
 cd wallet-core/samples/go
 ```
 

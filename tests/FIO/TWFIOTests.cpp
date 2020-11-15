@@ -1,12 +1,12 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
 // file LICENSE at the root of the source code distribution tree.
 
-#include <TrustWalletCore/TWAnyAddress.h>
-#include <TrustWalletCore/TWAnySigner.h>
-#include <TrustWalletCore/TWPrivateKey.h>
+#include <KhaosWalletCore/TWAnyAddress.h>
+#include <KhaosWalletCore/TWAnySigner.h>
+#include <KhaosWalletCore/TWPrivateKey.h>
 #include "proto/FIO.pb.h"
 #include "FIO/Address.h"
 #include "Data.h"
@@ -142,7 +142,7 @@ TEST(TWFIO, NewFundsRequest) {
     input.mutable_action()->mutable_new_funds_request_message()->mutable_content()->set_coin_symbol("BTC");
     input.mutable_action()->mutable_new_funds_request_message()->mutable_content()->set_memo("Memo");
     input.mutable_action()->mutable_new_funds_request_message()->mutable_content()->set_hash("Hash");
-    input.mutable_action()->mutable_new_funds_request_message()->mutable_content()->set_offline_url("https://trustwallet.com");
+    input.mutable_action()->mutable_new_funds_request_message()->mutable_content()->set_offline_url("https://khaoswallet.com");
     input.mutable_action()->mutable_new_funds_request_message()->set_fee(3000000000);
 
     Proto::SigningOutput output;

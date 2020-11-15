@@ -1,9 +1,9 @@
-# Sample macOS Application for [Wallet-Core](https://github.com/trustwallet/wallet-core)
+# Sample macOS Application for [Wallet-Core](https://github.com/Khaos-Labs/khaos-wallet-core)
 
 ## Overview
 
 This folder contains a simple but complete **iOS/macOS** sample application, for demostrating usage of the
-[Wallet Core](https://github.com/trustwallet/wallet-core) library (part of [Trust Wallet](https://trustwallet.com)).
+[Wallet Core](https://github.com/Khaos-Labs/khaos-wallet-core) library (part of [Khaos Wallet](https://khaoswallet.com)).
 
 ## DISCLAIMER
 
@@ -13,11 +13,11 @@ This folder contains a simple but complete **iOS/macOS** sample application, for
 
 ## Documentation
 
-See the official [Trust Wallet developer documentation here](https://developer.trustwallet.com).
+See the official [Khaos Wallet developer documentation here](https://developer.khaoswallet.com).
 
 See especially Wallet Core
-[Integration Guide](https://developer.trustwallet.com/wallet-core/integration-guide),
-and [Build Instructions](https://developer.trustwallet.com/wallet-core/building).
+[Integration Guide](https://developer.khaoswallet.com/wallet-core/integration-guide),
+and [Build Instructions](https://developer.khaoswallet.com/wallet-core/building).
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ and [Build Instructions](https://developer.trustwallet.com/wallet-core/building)
 Go to the **samples/osx/cocoapods** folder within wallet core repo:
 
 ```shell
-git clone https://github.com/trustwallet/wallet-core.git
+git clone https://github.com/Khaos-Labs/khaos-wallet-core.git
 cd wallet-core/samples/osx/cocoapods
 ```
 
@@ -43,7 +43,7 @@ pod install
 * Open the following workspace with Xcode: `osx/cocoapods/WalletCoreExample.xcworkspace` 
 * Build and Run
 
-The relevant sample code is in the file [`WalletCoreExample/ViewController.swift`](https://github.com/trustwallet/wallet-core/blob/master/samples/osx/cocoapods/WalletCoreExample/ViewController.swift).
+The relevant sample code is in the file [`WalletCoreExample/ViewController.swift`](https://github.com/Khaos-Labs/khaos-wallet-core/blob/master/samples/osx/cocoapods/WalletCoreExample/ViewController.swift).
 Output appears in Output window (or stdout).
 
 ```
@@ -71,4 +71,4 @@ An overview of the operations done in the sample app is as follows.
   * put together a send transaction (contains sender and receiver address, amount, etc.)
   * sign this transaction (using the private key)
 
-See the [Integration Guide](https://developer.trustwallet.com/wallet-core/integration-guide).
+See the [Integration Guide](https://developer.khaoswallet.com/wallet-core/integration-guide).

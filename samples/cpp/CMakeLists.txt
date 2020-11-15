@@ -1,26 +1,26 @@
-# Expected input configuration: WALLET_CORE: directory for TrustWalletCore build dir
+# Expected input configuration: WALLET_CORE: directory for KhaosWalletCore build dir
 # e.g. cmake . -DWALLET_CORE=../wallet-core
 cmake_minimum_required (VERSION 3.4)
 project (wallet-core-demo-cpp)
 
-set (SETUP_MESSAGE "Please provide TrustWalletCore build directory with -DWALLET_CORE.   Example: cmake . -DWALLET_CORE=../wallet-core")
+set (SETUP_MESSAGE "Please provide KhaosWalletCore build directory with -DWALLET_CORE.   Example: cmake . -DWALLET_CORE=../wallet-core")
 
 if (NOT WALLET_CORE)
     message (FATAL_ERROR "${SETUP_MESSAGE}")
 endif ()
 
 # Include dirs:
-# ${WALLET_CORE}/include -- public TrustWalletCore includes
-# ${WALLET_CORE}/src -- internal TrustWalletCore files, for signer protobuf messages
+# ${WALLET_CORE}/include -- public KhaosWalletCore includes
+# ${WALLET_CORE}/src -- internal KhaosWalletCore files, for signer protobuf messages
 # ${WALLET_CORE}/build/local/include) -- for protobuf includes
 include_directories (${CMAKE_SOURCE_DIR} ${WALLET_CORE}/include ${WALLET_CORE}/src ${WALLET_CORE}/build/local/include)
 link_directories (${WALLET_CORE}/build ${WALLET_CORE}/build/trezor-crypto ${WALLET_CORE}/build/local/lib)
 
-find_library(WALLET_CORE_LIB_FILE TrustWalletCore PATH ${WALLET_CORE}/build)
+find_library(WALLET_CORE_LIB_FILE KhaosWalletCore PATH ${WALLET_CORE}/build)
 if (NOT WALLET_CORE_LIB_FILE)
-    message (FATAL_ERROR "TrustWalletCore library not found.  ${SETUP_MESSAGE}")
+    message (FATAL_ERROR "KhaosWalletCore library not found.  ${SETUP_MESSAGE}")
 else ()
-    message ("TrustWalletCore library found here: ${WALLET_CORE_LIB_FILE}")
+    message ("KhaosWalletCore library found here: ${WALLET_CORE_LIB_FILE}")
 endif ()
 
 # Create all libraries and executables in the root binary dir
@@ -63,4 +63,4 @@ SET (CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${PLATFORM_LINK_FLAGS}")
 add_executable (sample sample.cpp)
 
 # link with our library, and default platform libraries
-target_link_libraries (sample TrustWalletCore TrezorCrypto protobuf ${PLATFORM_LIBS})
+target_link_libraries (sample KhaosWalletCore TrezorCrypto protobuf ${PLATFORM_LIBS})

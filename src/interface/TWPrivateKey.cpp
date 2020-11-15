@@ -1,4 +1,4 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -10,7 +10,7 @@
 #include <TrezorCrypto/ecdsa.h>
 #include <TrezorCrypto/rand.h>
 #include <TrezorCrypto/secp256k1.h>
-#include <TrustWalletCore/TWPrivateKey.h>
+#include <KhaosWalletCore/TWPrivateKey.h>
 
 #include <exception>
 

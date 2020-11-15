@@ -1,10 +1,10 @@
-name: TrustWalletCore
+name: KhaosWalletCore
 options:
-  bundleIdPrefix: com.trustwallet
+  bundleIdPrefix: com.khaoswallet
   createIntermediateGroups: true
 settings:
   base:
-    HEADER_SEARCH_PATHS: $(SRCROOT)/wallet-core ${SRCROOT}/trezor-crypto/src
+    HEADER_SEARCH_PATHS: $(SRCROOT)/khaos-wallet-core ${SRCROOT}/trezor-crypto/src
     SYSTEM_HEADER_SEARCH_PATHS: ${SRCROOT}/include ${SRCROOT}/../build/local/include ${SRCROOT}/trezor-crypto/include $(SRCROOT)/protobuf /usr/local/include
     CLANG_CXX_LANGUAGE_STANDARD: c++17
     SWIFT_VERSION: 5.1
@@ -21,7 +21,7 @@ targets:
       - path: include
         headerVisibility: public
         excludes:
-          - "TrustWalletCore/TW*Proto.h"
+          - "KhaosWalletCore/TW*Proto.h"
       - path: wallet-core
         headerVisibility: project
         excludes:

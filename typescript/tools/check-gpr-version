@@ -7,7 +7,7 @@ GHR_KEY_PATH='.data.repository.packages.edges[0].node.latestVersion.version'
 GHR_VERSION=$(curl -X "POST" "https://api.github.com/graphql" \
      -H "Authorization: Bearer $TOKEN" \
      -H 'Content-Type: application/json; charset=utf-8' \
-     -d $'{"query": "query { repository(owner: \\"trustwallet\\", name:\\"wallet-core\\") { name packages(names: \\"wallet-core\\", first: 1) { edges { node { name latestVersion { version summary } } } } } } "}' \
+     -d $'{"query": "query { repository(owner: \\"Khaos-Labs\\", name:\\"khaos-wallet-core\\") { name packages(names: \\"khaos-wallet-core\\", first: 1) { edges { node { name latestVersion { version summary } } } } } } "}' \
      | jq $GHR_KEY_PATH)
 
 if [[ $VERSION != $GHR_VERSION ]]; then

@@ -12,7 +12,7 @@ version = ARGV[0] || `git describe --long --tags | cut -f 1 -d "-"`.strip
 puts "Processing version: #{version}"
 
 # Get release by tag
-release = `curl -u #{ENV['GITHUB_USER']}:#{ENV['GITHUB_TOKEN']} https://api.github.com/repos/trustwallet/wallet-core/releases/tags/#{version}`
+release = `curl -u #{ENV['GITHUB_USER']}:#{ENV['GITHUB_TOKEN']} https://api.github.com/repos/Khaos-Labs/khaos-wallet-core/releases/tags/#{version}`
 release_hash = JSON.parse(release)
 upload_url = release_hash['upload_url']
 puts "asset upload url: #{upload_url}"
@@ -30,11 +30,11 @@ end
 puts 'Archiving...'
 includes = Dir.glob('include/**/*.h') + Dir.glob('lib/**/*.{h,hpp}')
 sources = Dir.glob('swift/Sources/**/*.{swift,h,m}')
-# Rename libTrustWalletCore.a to avoid conflicts with cocoapods static lib
-File.rename('build/ios/libTrustWalletCore.a', 'build/ios/libCore.a')
+# Rename libKhaosWalletCore.a to avoid conflicts with cocoapods static lib
+File.rename('build/ios/libKhaosWalletCore.a', 'build/ios/libCore.a')
 libs = Dir.glob('build/ios/*.a')
 files = includes + sources + libs + ['LICENSE']
-file_name = "TrustWalletCore-iOS-#{version}.zip"
+file_name = "KhaosWalletCore-iOS-#{version}.zip"
 _, stderr, status = Open3.capture3('zip', file_name, *files)
 if status != 0
   STDERR.puts stderr
@@ -53,10 +53,10 @@ puts "final download url: #{download_url}"
 puts 'Publishing...'
 podspec = <<-PODSPEC
 Pod::Spec.new do |s|
-  s.name         = 'TrustWalletCore'
+  s.name         = 'KhaosWalletCore'
   s.version      = '#{version}'
-  s.summary      = 'Trust Wallet core data structures and algorithms.'
-  s.homepage     = 'https://github.com/trustwallet/wallet-core'
+  s.summary      = 'Khaos Wallet core data structures and algorithms.'
+  s.homepage     = 'https://github.com/Khaos-Labs/khaos-wallet-core'
   s.license      = 'MIT'
   s.authors      = { 'Alejandro Isaza' => 'al@isaza.ca' }
   s.module_name  = 'WalletCore'
@@ -95,11 +95,11 @@ Pod::Spec.new do |s|
     ss.pod_target_xcconfig = {
         'ARCHS[sdk=iphonesimulator*]' => '$(ARCHS_STANDARD_64_BIT)'
     }
-    ss.dependency 'TrustWalletCore/Types'
+    ss.dependency 'KhaosWalletCore/Types'
   end
 end
 PODSPEC
-file = File.new('build/TrustWalletCore.podspec', 'w')
+file = File.new('build/KhaosWalletCore.podspec', 'w')
 file.write(podspec)
 file.close
 

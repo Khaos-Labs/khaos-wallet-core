@@ -1,5 +1,5 @@
 
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -10,9 +10,9 @@
 #include "HexCoding.h"
 #include "proto/Bitcoin.pb.h"
 #include "proto/Decred.pb.h"
-#include <TrustWalletCore/TWBitcoinScript.h>
-#include <TrustWalletCore/TWBitcoinSigHashType.h>
-#include <TrustWalletCore/TWAnySigner.h>
+#include <KhaosWalletCore/TWBitcoinScript.h>
+#include <KhaosWalletCore/TWBitcoinSigHashType.h>
+#include <KhaosWalletCore/TWAnySigner.h>
 #include <gtest/gtest.h>
 
 

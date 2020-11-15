@@ -14,7 +14,7 @@ Encoding.default_internal = Encoding::UTF_8
 
 options = OpenStruct.new
 # default input / output path
-options.input = "#{CurrentDir}/../../include/TrustWalletCore"
+options.input = "#{CurrentDir}/../../include/KhaosWalletCore"
 options.output = "#{CurrentDir}/../../"
 options.swift = true
 options.java = true

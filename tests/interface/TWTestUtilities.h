@@ -1,4 +1,4 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -6,8 +6,8 @@
 
 #pragma once
 
-#include <TrustWalletCore/TWData.h>
-#include <TrustWalletCore/TWString.h>
+#include <KhaosWalletCore/TWData.h>
+#include <KhaosWalletCore/TWString.h>
 #include <gtest/gtest.h>
 #include <google/protobuf/util/json_util.h>
 

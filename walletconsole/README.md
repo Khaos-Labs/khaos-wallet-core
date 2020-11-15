@@ -2,12 +2,12 @@
 
 The *Wallet Core* library comes with an interactive command-line utility, for accessing key- and address management functionality of the library. 
 
-Further details: [developer.trustwallet.com](https://developer.trustwallet.com)/[wallet-core/walletconsole](https://developer.trustwallet.com/wallet-core/walletconsole).
+Further details: [developer.khaoswallet.com](https://developer.khaoswallet.com)/[wallet-core/walletconsole](https://developer.khaoswallet.com/wallet-core/walletconsole).
 
 ## Quick Start
 
     $ ./build/walletconsole/walletconsole 
-    Wallet-Core Console                          (c) TrustWallet
+    Wallet-Core Console                          (c) KhaosWallet
     Type 'help' for list of commands.
     > help
     Commands:

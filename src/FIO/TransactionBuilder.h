@@ -1,4 +1,4 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -108,7 +108,7 @@ public:
     /// @walletTpId The FIO name of the originating wallet (project-wide constant)
     /// @expiryTime Expiry for this message, can be 0, then it is taken from current time with default expiry
     /// @iv Optional initial values for encryption, should be empty.  Can be set for testability (16 bytes).
-    /// Note: as of FIO testnet v0.9.0, this transaction is not accepted; see https://github.com/trustwallet/wallet-core/issues/850
+    /// Note: as of FIO testnet v0.9.0, this transaction is not accepted; see https://github.com/Khaos-Labs/khaos-wallet-core/issues/850
     static std::string createNewFundsRequest(const Address& address, const PrivateKey& privateKey,
         const std::string& payerFioName, const std::string& payerFioAddress, const std::string& payeeFioName, const std::string& payeePublicAddress,
         const std::string& amount, const std::string& coinSymbol, const std::string& memo, const std::string& hash, const std::string& offlineUrl,

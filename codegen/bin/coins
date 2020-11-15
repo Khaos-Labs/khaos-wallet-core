@@ -13,7 +13,7 @@ def self.format_name(n)
 end
 
 def self.coin_img(coin)
-  "<img src=\"https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/#{coin}/info/logo.png\" width=\"32\" />"
+  "<img src=\"https://raw.githubusercontent.com/khaoswallet/assets/master/blockchains/#{coin}/info/logo.png\" width=\"32\" />"
 end
 
 # Explorer urls
@@ -31,7 +31,7 @@ erbs = [
   {'template' => 'CoinInfoData.cpp.erb', 'folder' => 'src/Generated', 'file' => 'CoinInfoData.cpp'},
   {'template' => 'coins.md.erb', 'folder' => 'docs', 'file' => 'coins.md'},
   {'template' => 'hrp.cpp.erb', 'folder' => 'src/Generated', 'file' => 'TWHRP.cpp'},
-  {'template' => 'hrp.h.erb', 'folder' => 'include/TrustWalletCore', 'file' => 'TWHRP.h'}
+  {'template' => 'hrp.h.erb', 'folder' => 'include/KhaosWalletCore', 'file' => 'TWHRP.h'}
 ]
 
 FileUtils.mkdir_p File.join('src', 'Generated')

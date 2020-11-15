@@ -4,4 +4,4 @@ This is a Protobuf plugin that generates a header file with typedefs for every P
 
 This is invoked by the main CMake script. To invoke manually build then run:
 
-`protoc -I=../../src --plugin=protoc-gen-int=protoc-gen-int --int_out ../../include/TrustWalletCore ../../src/TrustWalletCore.proto`
+`protoc -I=../../src --plugin=protoc-gen-int=protoc-gen-int --int_out ../../include/KhaosWalletCore ../../src/KhaosWalletCore.proto`

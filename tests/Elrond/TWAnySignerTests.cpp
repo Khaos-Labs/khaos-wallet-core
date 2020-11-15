@@ -1,4 +1,4 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -7,7 +7,7 @@
 #include <gtest/gtest.h>
 #include "boost/format.hpp"
 
-#include <TrustWalletCore/TWAnySigner.h>
+#include <KhaosWalletCore/TWAnySigner.h>
 #include "HexCoding.h"
 #include "../interface/TWTestUtilities.h"
 #include "Elrond/Signer.h"

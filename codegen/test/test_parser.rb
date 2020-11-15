@@ -83,7 +83,7 @@ class ParserTest < Test::Unit::TestCase
   end
 
   def test_parse_public_key
-    parser = Parser.new(path: File.expand_path(File.join(File.dirname(__FILE__), '../../include/TrustWalletCore/TWPublicKey.h')))
+    parser = Parser.new(path: File.expand_path(File.join(File.dirname(__FILE__), '../../include/KhaosWalletCore/TWPublicKey.h')))
     parser.parse
 
     assert_not_nil(parser.entity)

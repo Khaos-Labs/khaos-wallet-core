@@ -5,7 +5,7 @@
 
 set -e
 
-FRAMEWORK=TrustWalletCore
+FRAMEWORK=KhaosWalletCore
 BUILD_FOLDER=build/ios-frameworks
 
 function init() {

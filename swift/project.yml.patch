@@ -4,7 +4,7 @@ index 0d0db77..49ea836 100644
 +++ b/swift/project.yml
 @@ -15,8 +15,8 @@ settings:
  targets:
-   TrustWalletCore:
+   KhaosWalletCore:
      type: framework
 -    platform: iOS
 -    deploymentTarget: 11.0
@@ -23,13 +23,13 @@ index 0d0db77..49ea836 100644
        CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION: YES_ERROR
 @@ -53,7 +52,7 @@ targets:
  
-   TrustWalletCoreTests:
+   KhaosWalletCoreTests:
      type: bundle.unit-test
 -    platform: iOS
 +    platform: macOS
      sources: [Tests]
      dependencies:
-       - target: TrustWalletCore
+       - target: KhaosWalletCore
 @@ -61,7 +60,7 @@ targets:
  
    trezor-crypto:

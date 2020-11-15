@@ -1,4 +1,4 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -12,11 +12,11 @@
 #include "PrivateKey.h"
 #include "PublicKey.h"
 
-#include <TrustWalletCore/TWBlockchain.h>
-#include <TrustWalletCore/TWCoinType.h>
-#include <TrustWalletCore/TWCurve.h>
-#include <TrustWalletCore/TWHDVersion.h>
-#include <TrustWalletCore/TWPurpose.h>
+#include <KhaosWalletCore/TWBlockchain.h>
+#include <KhaosWalletCore/TWCoinType.h>
+#include <KhaosWalletCore/TWCurve.h>
+#include <KhaosWalletCore/TWHDVersion.h>
+#include <KhaosWalletCore/TWPurpose.h>
 
 #include <string>
 #include <vector>

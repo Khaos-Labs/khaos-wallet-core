@@ -1,4 +1,4 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2020 Khaos Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -8,7 +8,7 @@
 #define JNI_TW_ANYSIGNER_H
 
 #include <jni.h>
-#include <TrustWalletCore/TWBase.h>
+#include <KhaosWalletCore/TWBase.h>
 
 TW_EXTERN_C_BEGIN
 
